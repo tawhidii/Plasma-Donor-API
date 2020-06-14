@@ -9,23 +9,7 @@ class BecomePlasmaDonors(models.Model):
     city = models.CharField(max_length=50)
     documents = models.FileField(upload_to='documents/%Y/%m/%d')
 
-
-    
-    GENDER = (
-        ('male','Male'),
-        ('female','Female')
-    )
-
-    gender    = models.CharField(max_length=15,choices=GENDER)
+    gender    = models.CharField(max_length=15,blank=False)
 
     def __str__(self):
         return self.name
-
-    
-  
-    
-
-
-
-
-    
